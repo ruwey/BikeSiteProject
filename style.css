@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,500;0,600;0,700;1,500&display=swap");
+
+body {
+  margin: 0px;
+}
+
+/*** Header Stuff */
+header a,
+header a:visited,
+header a:hover {
+  color: inherit;
+}
+
+header {
+  background-color: salmon;
+  justify-content: space-between;
+}
+
+header > * {
+  margin: 0px;
+}
+
+.content {
+  width: min(100vw, 600px);
+  margin: auto;
+}
+
+header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Zilla Slab", serif;
+}
+
+header > div > p {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+
+header > div > nav {
+  font-size: 1rem;
+}
+
+/* Mobile */
+@media (max-width: 550px) {
+  header > div {
+    display: block;
+  }
+
+  header p {
+    margin-top: 0px;
+  }
+}
