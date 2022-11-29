@@ -79,12 +79,26 @@ h1:before {
     transform: translate(0.2rem, -0.2rem);
 }
 
-img {
+h2 {
+    text-decoration: underline 8px solid #fcb7af;
+}
+
+img,
+iframe {
     max-width: 500px;
     margin-left: 100px;
 }
 
-/* Table (On First Page) */
+li {
+    padding: 10px;
+}
+
+input {
+    width: 95%;
+    height: 95%;
+}
+
+/* Table (On First and Last Page) */
 table {
     table-layout: fixed;
     border-collapse: collapse;
@@ -131,10 +145,10 @@ table * {
 	"c b";
     grid-template-rows: 4rem 1fr;
     grid-template-columns: 60% 40%;
-    height: 600px;
+    height: 400px;
 }
 
-#routeTopLayout div {
+#routeTopLayout span {
     grid-area: a;
 }
 
@@ -146,22 +160,51 @@ table * {
     margin-top: 10px;
 }
 
-#routeTopLayout p {
+#routeTopLayout div {
     grid-area: c;
+    padding: 40px;
+    padding-left: 0px;
 }
-
-/* Mobile */
 @media (max-width: 550px) {
     #routeTopLayout {
 	display: flex;
 	flex-direction: column;
 	height: auto;
     }
+    #routeTopLayout div {
+	padding: 0px;
+    }
 
     #routeTopLayout img {
 	object-fit: cover;
-	max-height: 500px;
-	width: 400px;
+	max-height: 400px;
+	width: 200px;
 	margin: auto;
+    }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, min(auto));
+    width: 100%;
+    height: 300px;
+    margin-left: 100px;
+}
+
+div.gallery > img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    padding: 0px;
+    margin-left: 0px;
+}
+
+/* Mobile */
+@media (max-width: 550px) {
+    .gallery {
+	display: block;
+	height: inherit;
+	margin-left: 0px;
     }
 }
